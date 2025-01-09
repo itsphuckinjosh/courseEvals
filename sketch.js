@@ -13,6 +13,9 @@ function preload(){
   quote = loadFont('IBMPlexMono-Bold.otf');
   course = loadFont('IBMPlexMono-Regular.otf');
   clouds = loadImage('clouds.jpg');
+  wind = createAudio('wind.m4a');
+  wind1 = createAudio('wind1.m4a');
+  wind2 = createAudio('wind2.m4a');
   
   
 }
@@ -37,10 +40,13 @@ function draw(){
   
   frameRate(10);
   textAlign(CENTER, CENTER);
-  
 
-  if(a<11){
+ 
   
+  if(a<11){
+    
+    wind.play()
+    
     imageMode(CENTER);
     var imgH = 3000
     var imgW = imgH * 1.773835920177384;
@@ -89,7 +95,7 @@ function draw(){
     a = a+1;
     print('a = ' + a)
   }else{
-    noLoop();
+
   }
 }
 
@@ -119,6 +125,13 @@ function mouseClicked() {
   
   a = 0;
   b=1;
+  
+  
   loop();
+  
+  
+}
+
+function mousePressed() {
   
 }
