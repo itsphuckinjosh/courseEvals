@@ -56,9 +56,9 @@ function draw(){
     var txtL = txt.length
     print(txt.length);
 
-    var qWidth = map(txtL, 0, 1200, 300, 700);
+    var qWidth = map(txtL, 75, 1200, 480, 720);
     print('text box width is ' + qWidth + ' pixels');
-    var qHeight = map(txtL, 0, 1200, 400, 700);
+    var qHeight = map(txtL, 75, 1200, 600, 800);
     print('text box height is ' + qHeight + ' pixels');
     var qTxt = map(txtL, 0, 1000, 30, 20);
     var x = (windowWidth-qWidth)/2
@@ -69,8 +69,8 @@ function draw(){
   print('b = ' + b);
     
   if(b==0){
-    textSize(12);
-    textLeading(12);
+    textSize(16);
+    textLeading(20);
     textFont(quote);
 
     text("click for more student feedback", windowWidth/2, 50);
@@ -79,15 +79,15 @@ function draw(){
     push();
     scale(.1*a);
     
-    textSize(18);
-    textLeading(24);
+    textSize(24);
+    textLeading(30);
     textFont(quote);
 
     text(txt, x, y-50, qWidth, qHeight);
     pop();
 
-    textSize(12);
-    textLeading(16);
+    textSize(16);
+    textLeading(20);
     textFont(quote);
 
     text(table.getString(rSel, 2) + ', ' + table.getString(rSel, 3) + '\n' +   table.getString(rSel, 1), windowWidth/2, windowHeight-75);
