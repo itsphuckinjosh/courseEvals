@@ -70,11 +70,15 @@ function draw(){
     text("click for more student feedback", windowWidth/2, 50);
     }
     
+    push();
+    scale(.1*a);
+    
     textSize(18);
     textLeading(24);
     textFont(quote);
 
-    text(txt, x , y-50, qWidth, qHeight);
+    text(txt, x, y-50, qWidth, qHeight);
+    pop();
 
     textSize(12);
     textLeading(16);
