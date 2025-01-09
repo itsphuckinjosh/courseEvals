@@ -69,7 +69,7 @@ function draw(){
   print('b = ' + b);
     
   if(b==0){
-    textSize(12);
+    textSize(16);
     textLeading(12);
     textFont(quote);
 
@@ -86,7 +86,7 @@ function draw(){
     text(txt, x, y-50, qWidth, qHeight);
     pop();
 
-    textSize(12);
+    textSize(16);
     textLeading(16);
     textFont(quote);
 
